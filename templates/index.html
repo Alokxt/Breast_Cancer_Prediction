@@ -21,6 +21,10 @@
         padding: 30px;
         box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
+    .headline{
+        text-align: center;
+        color: #6C63FF;
+    }
 
     h1 {
         text-align: center;
@@ -103,7 +107,13 @@
             <h1>{{ prediction_text }}</h1>
         {% endif %}
     </div>
+
+    <div class="headline">
+            <h1>Breast Cancer Prediction WebApp</h1>
+    </div>
     <div class="container">
+
+
         <h1>Enter Measurements</h1>
         <form action="/predict" method="post">
 
