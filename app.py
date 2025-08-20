@@ -40,7 +40,7 @@ def predict():
     x_centred = sc.transform(int_features2)
     x_transformed = x_centred.dot(pc)
     prediction = svm.predict(x_transformed)
-    output = 'Breast Cancer Predicted' if prediction[0] == 1 else 'Bengin Tumor/No strong Cancer tumor detected.'
+    output = "⚠️ Malignant tumor detected (Breast Cancer)." if prediction[0] == 1 else "✅ Benign tumor detected (No signs of breast cancer)."
 
     return render_template('index.html', prediction_text='Prediction: {}'.format(output))
 
